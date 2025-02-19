@@ -1,62 +1,61 @@
-🎓 EDucation - Une Révolution dans l'Apprentissage Numérique
+🎓 EDucation - A Revolution in Digital Learning
 
-Bienvenue sur EDucation, une plateforme innovante conçue pour améliorer l'expérience d'apprentissage grâce aux dernières technologies web. Ce projet, basé sur Angular, vise à offrir une interface interactive et fluide pour les étudiants et les enseignants.
+Welcome to EDucation, an innovative platform designed to enhance the learning experience through the latest web technologies. This project, built with Angular, aims to provide an interactive and seamless interface for students and teachers.
 
-🔹 Technologie Moderne : Développé avec Angular 19.1.6 pour une performance optimale.
-🔹 Expérience Intuitive : Design ergonomique et animations fluides pour une navigation agréable.
-🔹 Personnalisation : Adapté aux besoins des utilisateurs avec des fonctionnalités avancées.
+🔹 Modern Technology: Developed with Angular 19.1.6 for optimal performance.
+🔹 Intuitive Experience: Ergonomic design and smooth animations for easy navigation.
+🔹 Customization: Tailored to users' needs with advanced features.
 
-🚀 Démarrer le serveur de développement
+🚀 Start the Development Server
 
-Pour lancer un serveur local de développement, exécutez :
+To launch a local development server, run:
 
 ng serve
 
-Une fois le serveur en cours d'exécution, ouvrez votre navigateur et accédez à http://localhost:4200/. L'application se rechargera automatiquement lorsque vous modifiez des fichiers source.
+Once the server is running, open your browser and go to http://localhost:4200/. The application will automatically reload whenever you modify any source files.
 
-🛠 Génération de composants
+🛠 Generating Components
 
-Angular CLI fournit des outils puissants pour générer du code. Pour créer un nouveau composant, exécutez :
+Angular CLI provides powerful tools for generating code. To create a new component, run:
 
-ng generate component nom-du-composant
+ng generate component component-name
 
-Pour obtenir une liste complète des schémas disponibles (comme les components, directives, ou pipes), utilisez :
+To get a complete list of available schematics (such as components, directives, or pipes), use:
 
 ng generate --help
 
-📦 Compilation du projet
+📦 Building the Project
 
-Pour compiler le projet, utilisez :
+To compile the project, use:
 
 ng build
 
-Cela générera les fichiers de build dans le répertoire dist/. Par défaut, la compilation en mode production optimise l'application pour de meilleures performances.
+This will generate the build files in the dist/ directory. By default, the production build optimizes the application for better performance.
 
-🧪 Exécution des tests unitaires
+🧪 Running Unit Tests
 
-Pour lancer les tests unitaires avec Karma, utilisez la commande :
+To execute unit tests with Karma, use the following command:
 
 ng test
 
-🔍 Tests end-to-end (E2E)
+🔍 End-to-End (E2E) Testing
 
-Pour exécuter des tests end-to-end, utilisez :
+To run end-to-end tests, use:
 
 ng e2e
 
-Remarque : Angular CLI ne fournit pas de framework de test E2E par défaut. Vous pouvez choisir celui qui correspond à vos besoins.
+Note: Angular CLI does not include an end-to-end testing framework by default. You can choose one that best suits your needs.
 
-📚 Ressources supplémentaires
+📚 Additional Resources
 
-Pour plus d'informations sur l'utilisation d'Angular CLI, consultez la documentation officielle.
+For more information on using Angular CLI, check out the official documentation.
 
-🎨 Améliorations du Design
+🎨 Design Enhancements
 
-Intégration d'animations modernes et d'interactions fluides.
+Integration of modern animations and smooth interactions.
 
-Ajout d'un effet 3D pour une expérience utilisateur immersive.
+Addition of 3D effects for an immersive user experience.
 
-Amélioration des performances en optimisant les assets et les styles.
+Performance optimization by refining assets and styles.
 
-🚀 Bon développement !
-
+🚀 Happy coding!
