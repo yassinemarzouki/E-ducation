@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Course } from '../../models/course.model';
 
 @Component({
   selector: 'app-courses',
@@ -8,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class CoursesComponent {
 
+  @Input() course!: Course; // Réception des données du parent
+
+  constructor() {}
 }
