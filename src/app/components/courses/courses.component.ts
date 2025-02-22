@@ -1,15 +1,21 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Course } from '../../models/course.model';
+import { CourseService } from '../../services/course.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-courses',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss'
 })
-export class CoursesComponent {
+export class CoursesComponent implements OnInit {
+  courses: any[] = [];
 
-  @Input() course!: Course; // Réception des données du parent
+  constructor(private courseService: CourseService) {}
 
-  constructor() {}
+  ngOnInit(): void {
+    this.courses = this.courseService.getCourses(); // Récupère les cours
+  }
 }
