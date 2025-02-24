@@ -5,15 +5,36 @@ import { Injectable } from '@angular/core';
 })
 export class CourseService {
 
-  constructor() { }
-
   private courses = [
-    { id: 1, title: 'Introduction à Angular', description: 'Apprenez les bases d\'Angular.', duration: '2h', image: 'assets/courses/ArchitectureToken.jpeg' },
-    { id: 2, title: 'JavaScript Avancé', description: 'Maîtrisez les concepts avancés de JavaScript.', duration: '3h', image: 'assets/courses/Architecture-Token.jpeg' },
-    { id: 3, title: 'Node.js pour Débutants', description: 'Découvrez comment créer des applications backend avec Node.js.', duration: '4h', image: 'assets/images/nodejs.jpg' },
+    {
+      id: 1,
+      title: 'Introduction à Angular',
+      description: 'Apprenez les bases d\'Angular et créez des applications web modernes.',
+      image: 'assets/images/angular.jpg',
+    },
+    {
+      id: 2,
+      title: 'JavaScript Avancé',
+      description: 'Maîtrisez les concepts avancés de JavaScript.',
+      image: 'assets/images/javascript.jpg',
+    },
+    {
+      id: 3,
+      title: 'Node.js pour les Débutants',
+      description: 'Découvrez comment créer des applications backend avec Node.js.',
+      image: 'assets/images/nodejs.jpg',
+    },
   ];
 
+  constructor() {}
+
+  // Méthode pour récupérer tous les cours
   getCourses() {
-    return this.courses; // ICI il ya renvoie de la liste des cours
+    return this.courses;
+  }
+
+  // Méthode pour récupérer un cours par son ID
+  getCourseById(id: number) {
+    return this.courses.find((course) => course.id === id);
   }
 }
