@@ -1,22 +1,27 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [FontAwesomeModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+// Les icônes que j'ai utilisées dans le composant
+faBars = faBars;
+faUser = faUser;
 
-  isMenuOpen = false; // État du menu principal
-  isAuthMenuOpen = false; // État du menu d'authentification
+  isMenuOpen = false; 
+  isAuthMenuOpen = false; 
 
-  // Basculer l'état du menu principal
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  // Basculer l'état du menu d'authentification
   toggleAuthMenu() {
     this.isAuthMenuOpen = !this.isAuthMenuOpen;
   }
