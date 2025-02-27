@@ -1,1 +1,32 @@
-<p>course-list works!</p>
+<section class="course-list">
+    <h2>Nos Cours</h2>
+    <div class="filters">
+      <input type="text" placeholder="Rechercher un cours..." />
+      <select>
+        <option>Tous les sujets</option>
+        <option>Développement Web</option>
+        <option>Data Science</option>
+        <option>Design Graphique</option>
+      </select>
+    </div>
+    <div class="courses">
+      <div class="course-card" *ngFor="let course of courses">
+        <div class="course-image">
+          <img [src]="course.image" [alt]="course.title" />
+        </div>
+        <div class="course-content">
+          <h3>{{ course.title }}</h3>
+          <p>{{ course.description }}</p>
+          <div class="course-actions">
+            <button class="btn-primary" (click)="viewDetails(course)">
+              <fa-icon [icon]="faInfoCircle"></fa-icon> En savoir plus
+            </button>
+            <button class="btn-secondary" (click)="enroll(course)">
+              <fa-icon [icon]="faUserPlus"></fa-icon> S'inscrire
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

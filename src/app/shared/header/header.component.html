@@ -3,9 +3,7 @@
     <nav>
       <!-- Bouton hamburger pour les petits écrans -->
       <button class="hamburger" (click)="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <fa-icon [icon]="faBars"></fa-icon> <!-- Icône hamburger -->
       </button>
       <!-- Menu principal -->
       <ul class="nav-links" [class.active]="isMenuOpen">
@@ -17,7 +15,7 @@
     <!-- Boutons d'authentification -->
     <div class="auth-buttons">
       <button class="user-icon" (click)="toggleAuthMenu()">
-        <i class="fas fa-user"></i> <!-- Icône utilisateur -->
+        <fa-icon [icon]="faUser"></fa-icon> <!-- Icône utilisateur -->
       </button>
       <ul class="auth-links" [class.active]="isAuthMenuOpen">
         <li><button class="login" routerLink="/auth">Connexion</button></li>
