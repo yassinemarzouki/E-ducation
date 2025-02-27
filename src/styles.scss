@@ -1,32 +1,41 @@
-@use "sass:color";
+// Typographie
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-$primary: #00A8E8; 
-$secondary: #7D5BA6; 
-$accent: #FFC857; 
-$cta: #FF4D6D; 
-$background-light: #FFFFFF;
-$background-gradient: linear-gradient(135deg, #00A8E8, #7D5BA6); 
-$text-dark: #1E1E2F; 
-$text-light: #FFFFFF; 
-
+// Styles globaux
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: $background-light;
-  color: $text-dark;
+  background-color: #F8F9FA; // Fond clair
+  color: #2E2E2E; // Texte sombre
 }
 
+// Boutons
 button {
-  background-color: $cta;
+  background-color: #6C63FF; // Violet moderne
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 
   &:hover {
-    background-color: color.adjust($cta, $lightness: -10%);
+    background-color: #5A52E0; // Version plus foncée de #6C63FF
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(108, 99, 255, 0.2);
+  }
+}
+
+// Liens
+a {
+  color: #6C63FF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #5A52E0; // Version plus foncée de #6C63FF
   }
 }

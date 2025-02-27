@@ -8,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  isMenuOpen = false; // État du menu principal
+  isAuthMenuOpen = false; // État du menu d'authentification
+
+  // Basculer l'état du menu principal
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  // Basculer l'état du menu d'authentification
+  toggleAuthMenu() {
+    this.isAuthMenuOpen = !this.isAuthMenuOpen;
+  }
 }
