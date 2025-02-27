@@ -1,31 +1,32 @@
-:root {
-  --primary-color: #6a11cb;
-  --secondary-color: #2575fc;
-  --accent-color: #ff6f61;
-  --background-color: #f4f4f4;
-  --text-color: #2c3e50;
-  --light-text-color: #666;
-  --white: #ffffff;
-}
+@use "sass:color";
+
+$primary: #00A8E8; 
+$secondary: #7D5BA6; 
+$accent: #FFC857; 
+$cta: #FF4D6D; 
+$background-light: #FFFFFF;
+$background-gradient: linear-gradient(135deg, #00A8E8, #7D5BA6); 
+$text-dark: #1E1E2F; 
+$text-light: #FFFFFF; 
 
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: var(--background-color);
-  color: var(--text-color);
-}
-
-h1, h2, h3 {
   margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  padding: 0;
+  background-color: $background-light;
+  color: $text-dark;
 }
 
 button {
-  cursor: pointer;
+  background-color: $cta;
+  color: white;
   border: none;
-  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color.adjust($cta, $lightness: -10%);
+  }
 }
