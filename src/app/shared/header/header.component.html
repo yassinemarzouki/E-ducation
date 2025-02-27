@@ -1,1 +1,27 @@
-<p>header works!</p>
+<header>
+    <div class="logo">EduTech</div>
+    <nav>
+      <!-- Bouton hamburger pour les petits écrans -->
+      <button class="hamburger" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- Menu principal -->
+      <ul class="nav-links" [class.active]="isMenuOpen">
+        <li><a routerLink="/home">Accueil</a></li>
+        <li><a routerLink="/courses">Cours</a></li>
+        <li><a routerLink="/dashboard">Tableau de bord</a></li>
+      </ul>
+    </nav>
+    <!-- Boutons d'authentification -->
+    <div class="auth-buttons">
+      <button class="user-icon" (click)="toggleAuthMenu()">
+        <i class="fas fa-user"></i> <!-- Icône utilisateur -->
+      </button>
+      <ul class="auth-links" [class.active]="isAuthMenuOpen">
+        <li><button class="login" routerLink="/auth">Connexion</button></li>
+        <li><button class="register" routerLink="/auth">Inscription</button></li>
+      </ul>
+    </div>
+  </header>
