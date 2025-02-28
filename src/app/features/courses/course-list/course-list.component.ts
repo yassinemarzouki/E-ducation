@@ -19,25 +19,25 @@ export class CourseListComponent {
      id: 1,
      title: 'Développement Web Avancé',
      description: 'Maîtrisez les technologies modernes du web.',
-     image: 'assets/cours/cour3.jpg',
+     image: 'courses/cour3.jpg',
    },
    {
      id: 2,
      title: 'Data Science pour Débutants',
      description: 'Apprenez les bases de la data science.',
-     image: 'assets/cours/cour3.jpg',
+     image: 'courses/cour3.jpg',
    },
    {
      id: 3,
      title: 'Design Graphique avec Figma',
      description: 'Créez des designs professionnels avec Figma.',
-     image: 'assets/cours/cour3.jpg',
+     image: 'courses/cour3.jpg',
    },
    {
      id: 4,
      title: 'Marketing Digital',
      description: 'Découvrez les stratégies de marketing digital.',
-     image: 'assets/cours/cour3.jpg',
+     image: 'courses/cour3.jpg',
    },
  ];
 

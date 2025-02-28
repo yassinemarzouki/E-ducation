@@ -9,6 +9,7 @@ export const routes: Routes = [
   { path: 'dashboard', loadComponent: () => import('./features/dashboard/user-dashboard/user-dashboard.component').then(m => m.UserDashboardComponent) },
   { path: 'admin', loadComponent: () => import('./features/admin/admin-dashboard/admin-dashboard.component').then(m => m.AdminDashboardComponent) },
   { path: 'auth', loadComponent: () => import('./features/auth/auth/auth.component').then(m => m.AuthComponent) },
-  { path: '**', redirectTo: '/home' } // Gestion des erreurs 404
+  { path: '**', redirectTo: '/home' }, // Gestion des erreurs 404
+  { path: 'image', redirectTo: 'assets/development.png' } // Gestion des erreurs 404
     
 ];
