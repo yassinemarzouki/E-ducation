@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #2e2e2e;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // background: linear-gradient(135deg, #2f2d5f, #ff6584);
+  background:url('/auth/image0.jpg'); 
+  padding: 20px;
+
+  .auth-card {
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px; 
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(0);
+    opacity: 1;
+
+    &.active {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 30px;
+
+      h2 {
+        font-size: 28px;
+        color: #6c63ff;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #2e2e2e;
+      }
+    }
+
+    .auth-form {
+      .form-group {
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%;
+
+        input {
+          width: 100%; 
+          padding: 12px 12px 12px 40px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          font-size: 16px;
+          background-color: transparent;
+          transition: border-color 0.3s ease;
+          box-sizing: border-box; 
+
+          &:focus {
+            border-color: #6c63ff;
+            outline: none;
+
+            + label {
+              transform: translateY(-20px);
+              font-size: 12px;
+              color: #6c63ff;
+            }
+          }
+
+          &:not(:placeholder-shown) + label {
+            transform: translateY(-20px);
+            font-size: 12px;
+            color: #6c63ff;
+          }
+        }
+
+        label {
+          position: absolute;
+          left: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 16px;
+          color: #666;
+          transition: all 0.3s ease;
+          pointer-events: none;
+        }
+
+        .icon {
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #6c63ff;
+          font-size: 18px;
+        }
+      }
+
+      .btn-primary {
+        width: 100%;
+        background-color: #6c63ff;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background-color: #5a52e0;
+          transform: translateY(-2px);
+        }
+
+        fa-icon {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .auth-footer {
+      text-align: center;
+      margin-top: 20px;
+
+      p {
+        font-size: 14px;
+        color: #2e2e2e;
+
+        a {
+          color: #6c63ff;
+          text-decoration: none;
+          cursor: pointer;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #5a52e0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Ecran Mobile
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 10px;
+
+    .auth-card {
+      padding: 20px;
+      max-width: 90%; 
+
+      .auth-header {
+        h2 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .auth-form {
+        .form-group {
+          input {
+            font-size: 14px;
+            padding: 10px 10px 10px 35px;
+          }
+
+          label {
+            font-size: 14px;
+            left: 35px; 
+          }
+
+          .icon {
+            font-size: 16px;
+          }
+        }
+
+        .btn-primary {
+          font-size: 14px;
+        }
+      }
+
+      .auth-footer {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

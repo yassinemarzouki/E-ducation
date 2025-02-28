@@ -1,2 +1,61 @@
-<p>auth works!</p>
-<img src="assets/courses/cour3.jpg" alt="Test image" />
+<div class="auth-container">
+  <div class="auth-card">
+ 
+    <div class="auth-header">
+      <h2>{{ isSignUp ? 'Inscription' : 'Connexion' }}</h2>
+      <p>
+        {{ isSignUp ? 'Rejoignez notre communauté éducative.' : 'Connectez-vous pour accéder à vos cours.' }}
+      </p>
+    </div>
+
+    <form *ngIf="!isSignUp" class="auth-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <fa-icon [icon]="faEnvelope" class="icon"></fa-icon>
+        <input type="email" formControlName="email" required placeholder=" " />
+        <label>Email</label>
+      </div>
+
+      <div class="form-group">
+        <fa-icon [icon]="faLock" class="icon"></fa-icon>
+        <input type="password" formControlName="password" required placeholder=" " />
+        <label>Mot de passe</label>
+      </div>
+
+      <button type="submit" class="btn-primary">
+        <fa-icon [icon]="faSignInAlt"></fa-icon> Se connecter
+      </button>
+    </form>
+
+    
+    <form *ngIf="isSignUp" class="auth-form" [formGroup]="signupForm" (ngSubmit)="onSignup()">
+      <div class="form-group">
+        <fa-icon [icon]="faUser" class="icon"></fa-icon>
+        <input type="text" formControlName="username" required placeholder=" " />
+        <label>Nom d'utilisateur</label>
+      </div>
+
+      <div class="form-group">
+        <fa-icon [icon]="faEnvelope" class="icon"></fa-icon>
+        <input type="email" formControlName="email" required placeholder=" " />
+        <label>Email</label>
+      </div>
+
+      <div class="form-group">
+        <fa-icon [icon]="faLock" class="icon"></fa-icon>
+        <input type="password" formControlName="password" required placeholder=" " />
+        <label>Mot de passe</label>
+      </div>
+
+      <button type="submit" class="btn-primary">
+        <fa-icon [icon]="faUserPlus"></fa-icon> S'inscrire
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      <p>
+        {{ isSignUp ? 'Déjà membre ?' : 'Pas encore membre ?' }}
+        <a (click)="toggleForm()">{{ isSignUp ? 'Se connecter' : 'S\'inscrire' }}</a>
+      </p>
+    </div>
+  </div>
+</div>
